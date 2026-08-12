@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orchester - Intelligent Tutor System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- LEFT PANEL: Agent Controls -->
+        <div class="panel left-panel">
+            <h2>👨‍🏫 Agents</h2>
+            <div class="agents-list">
+                <div class="agent-control">
+                    <div class="agent-header">
+                        <span class="agent-icon">🔢</span>
+                        <span class="agent-name">Math Teacher</span>
+                    </div>
+                    <button class="toggle-btn math-btn" data-agent="math">OFF</button>
+                </div>
+
+                <div class="agent-control">
+                    <div class="agent-header">
+                        <span class="agent-icon">🔬</span>
+                        <span class="agent-name">Science Teacher</span>
+                    </div>
+                    <button class="toggle-btn science-btn" data-agent="science">OFF</button>
+                </div>
+
+                <div class="agent-control">
+                    <div class="agent-header">
+                        <span class="agent-icon">📚</span>
+                        <span class="agent-name">History Teacher</span>
+                    </div>
+                    <button class="toggle-btn history-btn" data-agent="history">OFF</button>
+                </div>
+
+                <div class="agent-control">
+                    <div class="agent-header">
+                        <span class="agent-icon">🎨</span>
+                        <span class="agent-name">Arts Teacher</span>
+                    </div>
+                    <button class="toggle-btn arts-btn" data-agent="arts">OFF</button>
+                </div>
+            </div>
+
+            <div class="input-section">
+                <textarea id="question-input" placeholder="Ask your question here..."></textarea>
+                <button id="submit-btn" class="submit-btn">Send Question</button>
+            </div>
+        </div>
+
+        <!-- MIDDLE PANEL: Agent Output -->
+        <div class="panel middle-panel">
+            <h2>📝 Agent Response</h2>
+            <div id="output-area" class="output-area">
+                <div class="welcome-message">
+                    <p>👋 Welcome to Orchester!</p>
+                    <p>Enable agents and ask questions to get started.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- RIGHT PANEL: Workflow Trace -->
+        <div class="panel right-panel">
+            <h2>⚙️ Workflow Trace</h2>
+            <div id="trace-area" class="trace-area">
+                <div class="trace-item trace-waiting">
+                    <span class="trace-icon">⏳</span>
+                    <span class="trace-text">Ready for input...</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
